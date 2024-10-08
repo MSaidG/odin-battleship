@@ -1,3 +1,149 @@
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: antiquewhite;
 }
+
+#root {
+    display: flex;
+    height: 98vh;
+}
+
+#game{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.gameboard table {
+    border: 3px solid #dededf;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: center;
+}
+
+.gameboard caption {
+    caption-side: top;
+    text-align: center;
+}
+
+.gameboard td {
+    border: 3px solid #dededf;
+    background-color: #ffffff;
+    color: #000000;
+    height: 2rem;
+    width: 2rem;
+}
+
+
+.gameboard td:hover {
+    background-color: #dededf;
+}
+
+#tornado {
+    width: 5rem;
+    height: 5rem;
+}
+
+.player-name {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+td.ship {
+    background-color: rgb(71, 124, 71);
+}
+
+td.hit-ship {
+    background-color: rgb(255, 120, 120);
+}
+
+td.hit-ship:hover {
+    pointer-events: none;
+    background-color: rgb(255, 120, 120);
+}
+
+td.ship:hover {
+    background-color: rgb(71, 124, 71);
+}
+
+td.hit-empty {
+    background-color: rgb(67, 62, 62);
+}
+
+td.hit-empty:hover {
+    pointer-events: none;
+    background-color: rgb(67, 62, 62);
+}
+
+#boards {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.ship {
+    overflow: visible;
+    width: 2.1rem;
+    height: 11.2rem;
+    background-color: rgb(71, 124, 71);
+    display: flex;
+    cursor: pointer;
+}
+
+.ship-box {
+    z-index: 2;
+    left: 0;
+    top: 0;
+    border: 2px solid #00f;
+    background: rgba(0,0,255,.05);
+    position: absolute !important;
+    margin: -2px;
+}
+
+/* .ui-draggable {
+    cursor: move !important;
+} */
+
+
+
+
+
+
+
+
+
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: #fff;
+    transition: background-color 0.2s ease-in-out;
+  }
+  button:hover {
+    background-color: #3e8e41;
+  }
+  button:active {
+    background-color: #2e6c3f;
+  }
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }

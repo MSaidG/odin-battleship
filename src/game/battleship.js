@@ -3,7 +3,7 @@ export class Battleship {
         this.name = name
         this.size = size
         this.health = size
-        this.isSunk = false
+        this.sunk = false
         this.isVertical = isVertical
     }
 
@@ -13,8 +13,8 @@ export class Battleship {
 
     isSunk() {
         if (this.health === 0) {
-            this.isSunk = true
+            this.sunk = true
         }
-        return this.isSunk
+        return this.sunk
     }
 }

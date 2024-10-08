@@ -52,12 +52,6 @@ export class Gameboard {
                 if (this.getShipOnSquare(x, y + i) !== null ||
                     this.getShipOnSquare(x + 1, y + i) !== null ||
                     this.getShipOnSquare(x - 1, y + i) !== null) {
-                        // console.log(this.getShipOnSquare(x - 1, y))                
-                        // console.log(this.getShipOnSquare(x - 1, y + 1))                
-                        // console.log(this.getShipOnSquare(x - 1, y - 1))                
-                        // console.log(this.getShipOnSquare(x + 1 + ship.size, y + 1))                
-                        // console.log(this.getShipOnSquare(x + 1 + ship.size, y - 1))                
-                        // console.log(this.getShipOnSquare(x + 1 + ship.size, y)) 
                     return false
                 }
             }
@@ -119,4 +113,7 @@ export class Gameboard {
         return false
     }
 
+    removeShip(ship) {
+        this.ships = this.ships.filter(s => s !== ship)
+    }
 }
