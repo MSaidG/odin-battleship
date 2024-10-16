@@ -27,13 +27,16 @@
             <p id="won"></p>
 
             <div id="boards">
-                <div class="ship" draggable="true"></div>
+                <div class="ship submarine" draggable="true"></div>
+                <div class="dropzone" id="dropzone"></div>
                 <div class="gameboard" role="region" tabindex="0">
+                    <caption class="player-name">Gameboard</caption>
                     <table class="board">
-                        <caption class="player-name">Gameboard</caption>
                         <tbody>
                             <tr>
                                 <td data-x="0" data-y="0">
+                                    <div class="ship cruiser"></div>
+
                                 </td>
                                 <td data-x="1" data-y="0"></td>
                                 <td data-x="2" data-y="0"></td>
@@ -159,8 +162,8 @@
     
     
                 <div class="gameboard" role="region" tabindex="0">
+                    <caption class="player-name">Gameboard</caption>
                     <table class="board">
-                        <caption class="player-name">Gameboard</caption>
                         <tbody>
                             <tr>
                                 <td data-x="0" data-y="0"></td>
